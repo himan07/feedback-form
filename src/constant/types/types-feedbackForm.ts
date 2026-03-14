@@ -1,6 +1,6 @@
 export interface FeedbackForm {
   name: string;
-  emaail: string;
+  email: string;
   category: string;
   rating: number;
   message: string;
