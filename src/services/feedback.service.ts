@@ -1,10 +1,12 @@
-import type { FeedbackForm } from "../constant/types/types-feedbackForm";
-import prisma from "../lib/prismaClient";
+import { Prisma } from "../../generated/prisma/client";
+import prismaClient from "../lib/prismaClient";
+
+const { prisma } = prismaClient;
 
 class FeedbackService {
   constructor() {}
 
-  async saveFeedback(feedback: FeedbackForm): Promise<void> {
+  async saveFeedback(feedback: Prisma.FeedbackCreateInput): Promise<void> {
     await prisma.feedback.create({
       data: feedback,
     });
