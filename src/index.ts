@@ -1,10 +1,8 @@
+import "dotenv/config";
 import express from "express";
-import dotenv from "dotenv";
 import type { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import feedbackRoutes from "./routes/feedbackRoutes";
-
-dotenv.config();
 
 const app = express();
 
